@@ -5,10 +5,12 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
-  let title = props.title;
+
+  const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
-    title = "updated";
+    setTitle('Updated Title');
+   console.log(title)
   };
 
   return (
